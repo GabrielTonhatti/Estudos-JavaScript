@@ -21,3 +21,5 @@ for (a in nums) {
         console.log(`Par = ${a},${b}`)
     }
 }
+
+//Teste
