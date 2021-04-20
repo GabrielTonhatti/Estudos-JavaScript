@@ -13,3 +13,4 @@ console.log('Escola '+ escola + "!")
 console.log(escola.replace(3, 'e'))
 
 console.log('Ana,Maria,Pedro'.split(','))
+
