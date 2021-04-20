@@ -23,3 +23,4 @@ function imprimirNomeGritado(obj) {
 
 const obj = { nome: 'Roberto' }
 imprimirNomeGritado(obj)
+
