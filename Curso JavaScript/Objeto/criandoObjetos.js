@@ -33,7 +33,7 @@ function CriarFuncionario(nome, salarioBase, faltas) {
 }
 
 const f1 = CriarFuncionario('João', 7980, 4)
-const f2 = CriarFuncionario('Maroa', 11400, 1)
+const f2 = CriarFuncionario('Maria', 11400, 1)
 console.log(f1.getSalario(), f2.getSalario())
 
 // object.create
