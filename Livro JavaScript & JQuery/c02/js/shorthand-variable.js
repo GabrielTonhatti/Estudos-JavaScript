@@ -11,9 +11,9 @@ total = price * quantity;
 
 /* Duas variáveis são declaradas e os valores são atribuídos na mesma linha.
  Então uma é declarada e um valor lhe é atribuído na linha seguinte*/
- var price = 5, quantity = 14;
- var total = price * quantity;
+var price = 5, quantity = 14;
+var total = price * quantity;
 
- // GRava o total no elemento com o id cost
- var el = document.getElementById('cost');
- el.textContent = '$' + total;
+// GRava o total no elemento com o id cost
+var el = document.getElementById('cost');
+el.textContent = '$' + total;
