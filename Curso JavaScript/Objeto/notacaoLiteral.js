@@ -20,7 +20,7 @@ const obj5 = {
     funcao1: function(){
         // ...
     },
-    funcao3() {
+    funcao2() {
         //..
     }
 }
