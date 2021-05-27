@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Validação CPF </title>
 </head>
+
 <body>
-    <button type = "button" id = 'Validacao_CPF'> Validação CPF </button>
-    <script src = "ValidacaoCPF.js"></script>
+    <input type="text" name="cpf" id="cpf-validate" placeholder="999.999.999-99">
+    <button type="button" id='Validacao_CPF'> Validação CPF </button>
+    <input type="text" id="telephone" name="telephone" placeholder="(99) 9999-9999" />
+    <input type="text" id="celphone" name="celphone" placeholder="(99) 99999-9999" />
+    <input type="text" id="CEP" name="CEP" placeholder="99.999-999" />
+
+    <div id="resultado"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+
+    <script src="//unpkg.com/vanilla-masker@1.1.1/build/vanilla-masker.min.js"></script>
+    <script src="mask.js"></script>
+    <script src="ValidacaoCPF.js"></script>
 </body>
+
 </html>

@@ -13,7 +13,8 @@ function validation() {
     let secondUpdateCPF;
     let concatenate;
 
-    cpf = prompt(`Validação do CPF: \nDigite o seu CPF:`);
+    cpf = document.getElementById('cpf-validate').value;
+    console.log(cpf)
     updateCPF = cpf.split('.')
     secondUpdateCPF = updateCPF[2].split('-')
     concatenate = updateCPF[0] + updateCPF[1] + secondUpdateCPF[0] + secondUpdateCPF[1]
@@ -42,14 +43,15 @@ function validation() {
         newCPF[9] = 0;
 
         if (newCPF[9] != vetCPF[9]) {
-            alert('CPF inválido!')
+            document.getElementById('resultado').textContent = 'CPF inválido!'
         }
     }
 
     if (resto == vetCPF[9]) {
         newCPF[9] = resto;
     } else {
-        alert('CPF inválido!')
+        document.getElementById('resultado').textContent = 'CPF válido!'
+
     }
 
     for (let j = 0; j < 10; j++) {
@@ -67,9 +69,9 @@ function validation() {
 
     if (resto == vetCPF[10]) {
         newCPF[10] = resto;
-        alert('CPF Válido!')
+        document.getElementById('resultado').textContent = 'CPF válido!'
     } else {
-        alert('CPF inválido!')
+        document.getElementById('resultado').textContent = 'CPF inválido!'
     }
 
     console.log('vetor CPF', vetCPF)
