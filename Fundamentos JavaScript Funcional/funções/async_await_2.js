@@ -15,7 +15,7 @@ function gerarNumerosEntre(min, max, numerosProibidos) {
     })
 }
 
-async function gerarMegaSena(qtdeNumeros) {
+async function gerarMegaSena(qtdeNumeros, tentativas = 1) {
 
     try {
         const numeros = [];
@@ -24,11 +24,15 @@ async function gerarMegaSena(qtdeNumeros) {
         }
 
         return numeros
-    } catch(e) {
-        throw "Que Chato!!!"
+    } catch (e) {
+        if (tentativas > 10) {
+            throw "Não deu certo!"
+        } else {
+            return gerarMegaSena(qtdeNumeros, tentativas + 1)
+        }
     }
 }
 
-gerarMegaSena(15)
+gerarMegaSena(15,)
     .then(console.log)
     .catch(console.log)
