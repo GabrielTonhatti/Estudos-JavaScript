@@ -52,7 +52,7 @@ $('.slider').each(function () {  // Para cada controle deslizante
 
     $.each($slides, function (index) {
         // Cria um elemento button para o botão
-        var $button = $('<button tupe = "button" class = "slide-btn">&bull;</button>');
+        var $button = $('<button type = "button" class = "slide-btn">&bull;</button>');
         if (index === currentIndex) {    // Se o índice é o item atual
             $button.addClass('active'); // Adiciona a classe ativa
         }
