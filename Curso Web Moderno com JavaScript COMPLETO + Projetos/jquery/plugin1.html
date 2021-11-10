@@ -9,19 +9,41 @@
 </head>
 
 <body class='conteudo exercicio'>
-    <h1>Plugin #01</h1>
-    <div>
-        {{ 1 + 2 }}
-        Texto 1
-        {{ 3 ** 3 }}
-        Texto 2
-        {{ console.log('Funcionou!') }}
-        Texto 3
-        {{ (function() { return 'Legal!!!' })() }}
-        Texto Final
-    </div>
+<h1>Plugin #01</h1>
+<div>
+    {{ 1 + 2 }}
+    Texto 1
+    {{ 3 ** 3 }}
+    Texto 2
+    {{ console.log('Funcionou!') }}
+    Texto 3
+    {{ (function() { return 'Legal!!!' })() }}
+    Texto Final
+</div>
 
-    <script>
-        // ...
-    </script>
+<script>
+
+    // const $ = { nome: 'Não é o jQuery' };
+    (function ($) {
+        $.fn.interpretar = function () {
+            const retirarChaves = s => s.substring(2, s.length - 2);
+            const conteudo = $(this).html();
+            const exporessoesComChaves = conteudo.match(/\{\{.+\}\}/g);
+            const expressoes = exporessoesComChaves.map(retirarChaves);
+            const resultados = expressoes.map(e => eval(e));
+
+            let conteudoFinal = conteudo;
+            for (let i = 0; i < exporessoesComChaves.length; i++) {
+                conteudoFinal = conteudoFinal.replace(
+                    exporessoesComChaves[i], resultados[i]
+                );
+            }
+
+            $(this).html(conteudoFinal);
+        }
+    })(jQuery);
+
+    $('div').interpretar();
+
+</script>
 </body>
