@@ -1,14 +1,19 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Arthur Oliviera",
-      "email": "aoliveira@cod3r.com.br"
+      "name": "Gabriel Tonhatti Cardoso",
+      "email": "gabrieltonhatti37@gmail.com",
+      "id": 3
     },
     {
-      "id": 2,
-      "name": "Maria Julia da Silva",
-      "email": "mjds@empresa.com.br"
+      "name": "Rafaela Aparecida Alexandre Oliveira",
+      "email": "rafaela.oliveira0202@hotmail.com",
+      "id": 4
+    },
+    {
+      "name": "Arthur",
+      "email": "arthur@gmail.com",
+      "id": 5
     }
   ]
 }
